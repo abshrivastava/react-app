@@ -16,7 +16,6 @@ class App extends React.Component {
     error: undefined
   }
   getWeather = async (e) => {
-    // var city, country
     e.preventDefault();
     const city = "GHAZIABAD";
     const country = "India";
@@ -28,8 +27,6 @@ class App extends React.Component {
     console.log("api_call>>>>", api_call)
     const data = await api_call.json();
     console.log("data>>>>", data)
-        // city= data.name
-    // var country= data.sys.country
     console.log("country>>>", country)
     if (data.sys.country === "IN") {
       this.setState({
